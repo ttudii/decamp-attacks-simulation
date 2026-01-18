@@ -1,0 +1,11 @@
+Execuție și Captură
+
+Pornește Wireshark: sudo wireshark &
+
+În Wireshark, selectează interfața eth0 și scrie în bara de filtrare: arp. Dă Start.
+
+În terminal, rulează atacul:
+
+sudo python3 attack_arp.py
+
+După ce scriptul termină (afișează lista de IP-uri), oprește captura în Wireshark.

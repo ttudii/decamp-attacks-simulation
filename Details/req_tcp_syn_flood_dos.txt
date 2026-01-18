@@ -1,0 +1,11 @@
+Execuție și Captură
+
+În Wireshark, filtru: tcp.flags.syn == 1.
+
+Rulează atacul:
+
+sudo python3 attack_syn_flood.py
+
+Lasă-l să meargă 15-30 de secunde. Vei vedea mii de pachete în Wireshark (de multe ori Wireshark se va bloca din cauza volumului, ceea ce e normal la DoS).
+
+Oprește cu CTRL+C în terminal.

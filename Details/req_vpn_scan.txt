@@ -1,0 +1,11 @@
+Execuție și Captură
+
+Asigură-te că ești conectat la VPN (verifică cu ip a, trebuie să ai interfata tun0 sau tap0).
+
+Pornește Wireshark pe interfața VPN (tun0).
+
+Filtru Wireshark: tcp.port == 80.
+
+Rulează atacul:
+
+sudo python3 attack_vpn_scan.py

@@ -1,0 +1,31 @@
+Execuție și Captură
+
+------------------------
+
+Pregătire Wireshark (pentru validare): 
+Deschide un terminal și pornește Wireshark în fundal:
+
+sudo wireshark &
+
+Selectează interfața eth0.
+În bara de filtrare scrie: icmp.
+
+------------------------
+
+Rularea Atacului: 
+În terminalul principal, rulează scriptul cu drepturi de root:
+
+sudo python3 attack_icmp_flood.py
+
+------------------------
+Verificare Efecte (În timpul atacului):
+
+Pe Windows XP: Uită-te cum CPU Usage urcă la 100% (Task Manager).
+
+Pe pfSense: Mergi la Status > Traffic Graph. Vei vedea traficul urcând brusc pe interfața Clients (Intrare) și LAB (Ieșire).
+
+Pe Wireshark (Kali): Vei vedea o avalanșă de pachete "Echo (ping) request".
+
+------------------------
+
+Oprire: Pentru a opri atacul, apasă CTRL+C în terminalul unde rulează scriptul Python.

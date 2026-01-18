@@ -1,0 +1,17 @@
+Execuție și Captură
+
+Deschide un al doilea terminal pe Kali și dă un Traceroute de control (să vezi calea normală):
+
+traceroute 192.168.40.126
+
+
+În Wireshark, filtru: rip.
+
+Rulează atacul în primul terminal:
+
+sudo python3 attack_rip.py
+
+
+Așteaptă 15-20 secunde, apoi în al doilea terminal dă iar traceroute. Dacă atacul a reușit, calea va fi diferită sau va da timeout.
+
+În Wireshark vei vedea pachete "RIPv2 Response" venind de la IP-ul lui Kali.

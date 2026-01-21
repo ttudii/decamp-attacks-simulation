@@ -1,3 +1,15 @@
+# INSTRUCTIONS TO RUN THE GUI
+# 
+# Ensure you have this exact folder structure:
+#       attack_launcher.py (this script)
+#       Internal Attacker folder (containing the scripts)
+#       External Attacker folder (containing the script)
+# 
+# Open a terminal in this specific folder.
+# Run the command: python attack_launcher.py
+# The window will open. When you click the buttons, the scripts located in the sub-folders will be executed.
+
+
 import tkinter as tk
 from tkinter import messagebox
 import subprocess
@@ -41,7 +53,7 @@ def run_vpn_scan():
     path = os.path.join("External Attacker", "vpn_tcp_syn_scan_recon.py")
     execute_script(path, "VPN TCP SYN Scan")
 
-# Tkinter GUI configuration
+# tkinter GUI configuration
 root = tk.Tk()
 root.title("DeCaMP Simulation Launcher")
 root.geometry("400x450")
@@ -49,7 +61,7 @@ root.geometry("400x450")
 label_title = tk.Label(root, text="Control panel", font=("Helvetica", 16, "bold"))
 label_title.pack(pady=20)
 
-# Internal Attacker
+# internal Attacker
 frame_internal = tk.LabelFrame(root, text="Internal Attacker", padx=10, pady=10)
 frame_internal.pack(fill="x", padx=20, pady=5)
 
@@ -65,7 +77,7 @@ btn_rip.pack(fill="x", pady=2)
 btn_syn_int = tk.Button(frame_internal, text="TCP SYN Flood", command=run_tcp_syn_flood_internal, bg="#ffcccb")
 btn_syn_int.pack(fill="x", pady=2)
 
-# External Attacker
+# external Attacker
 frame_external = tk.LabelFrame(root, text="External Attacker", padx=10, pady=10)
 frame_external.pack(fill="x", padx=20, pady=15)
 

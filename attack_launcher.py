@@ -1,15 +1,3 @@
-# INSTRUCTIONS TO RUN THE GUI
-# 
-# Ensure you have this exact folder structure:
-#       attack_launcher.py (this script)
-#       Internal Attacker folder (containing the scripts)
-#       External Attacker folder (containing the script)
-# 
-# Open a terminal in this specific folder.
-# Run the command: python attack_launcher.py
-# The window will open. When you click the buttons, the scripts located in the sub-folders will be executed.
-
-
 import tkinter as tk
 from tkinter import messagebox
 import subprocess
@@ -81,7 +69,7 @@ btn_syn_int.pack(fill="x", pady=2)
 frame_external = tk.LabelFrame(root, text="External Attacker", padx=10, pady=10)
 frame_external.pack(fill="x", padx=20, pady=15)
 
-btn_vpn = tk.Button(frame_external, text="VPN TCP SYN Scan", command=run_vpn_scan, bg="#lightblue")
+btn_vpn = tk.Button(frame_external, text="TCP SYN Scan", command=run_vpn_scan, bg="lightblue")
 btn_vpn.pack(fill="x", pady=2)
 
 btn_exit = tk.Button(root, text="Exit", command=root.quit)

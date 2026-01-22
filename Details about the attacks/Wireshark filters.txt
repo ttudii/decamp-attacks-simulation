@@ -1,0 +1,24 @@
+Attack 1: ARP Sweep Recon
+Filter: arp
+
+---------------
+
+Attack 2: TCP SYN Scan Recon
+Filter: tcp.port == 80
+
+---------------
+
+Attack 3: TCP SYN Flood DoS
+Filter: tcp.flags.syn == 1
+
+---------------
+
+Attack 4: ICMP Flood DoS
+Filter: icmp
+
+----------------
+Attack 5: RIP Attack
+Filter: rip
+
+VMs needed: R1 - R4, Kali internal, Kali SNM, PC1, Windows XP (normal PC), Splunk, pfSense
+

@@ -22,3 +22,7 @@ Filter: rip
 
 VMs needed: R1 - R4, Kali internal, Kali SNM, PC1, Windows XP (normal PC), Splunk, pfSense
 
+Command for PC1: sudo tcpdump -i eth0 host 192.168.40.126             = listening the incoming traffic
+
+
+
